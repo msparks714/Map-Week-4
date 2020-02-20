@@ -14,8 +14,8 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0px;
-  left: 300px;
+  right: 300px;
+  left: 0px;
 }
 
 h3 {
@@ -30,10 +30,7 @@ button:hover {
 }
 
 #sidebar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  float: right;
   width: 300px;
   background-color: #000;
   color: #FFF;
