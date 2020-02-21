@@ -26,5 +26,17 @@ map.addControl(new mapboxgl.NavigationControl());
  new mapboxgl.Marker()
    .setLngLat([-73.9895411, 40.744695])
    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML('I am in Central Park'))
+    .setHTML('I am in Bryant Park'))
    .addTo(map);
+
+
+   // iterate over each object in studentData
+   bathroomData.forEach(function(manuelEntry) {
+     // for each object in the studentData, add a marker to the map with a popup
+     new mapboxgl.Marker()
+       .setLngLat([manuelEntry.longitude, manuelEntry.latitude])
+       .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+         .setHTML(`${manuelEntry.name} is a  ${manuelEntry.type_of_place} type of space where you can use the restroom without having to pay`)
+       )
+       .addTo(map);
+   })

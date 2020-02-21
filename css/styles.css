@@ -16,6 +16,8 @@ body {
   bottom: 0;
   right: 300px;
   left: 0px;
+  color:#fff;
+
 }
 
 h3 {
@@ -23,17 +25,16 @@ h3 {
   font-size: 1.8rem;
 }
 
-/* on hover, make the background darker and turn the cursor to a pointer */
-button:hover {
-  cursor: pointer;
-  background-color: #006987;
-}
-
 #sidebar {
   float: right;
   width: 300px;
+  hieght: 1500 px;
   background-color: #000;
   color: #FFF;
   padding: 25px;
   box-sizing: border-box;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #006987;
 }
