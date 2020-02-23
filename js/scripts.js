@@ -15,7 +15,6 @@ var initOptions = {
   zoom: initialZoom, // initial view zoom level (0-18)
 }
 
-
 // create the new map
 var map = new mapboxgl.Map(initOptions);
 
@@ -36,7 +35,17 @@ map.addControl(new mapboxgl.NavigationControl());
      new mapboxgl.Marker()
        .setLngLat([manuelEntry.longitude, manuelEntry.latitude])
        .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-         .setHTML(`${manuelEntry.name} is a  ${manuelEntry.type_of_place} type of space where you can use the restroom without having to pay`)
-       )
-       .addTo(map);
-   })
+         .setHTML(`${manuelEntry.name} is a  ${manuelEntry.type_of_place} Here are their hours:
+           ${manuelEntry.hours} and their <a target="_blank" href="${manuelEntry.website}"> website. </a>`
+         ))
+      .addTo(map);
+    })
+
+
+var directions = new MapboxDirections({
+  accessToken: 'pk.eyJ1IjoibXNwYXJrczcxNCIsImEiOiJjazZsZjl0aXAwYmMzM21uMHpmNjcxMzFoIn0.yMKMcXRxt0QzELn7THF_8g',
+  unit: 'metric',
+  profile: 'mapbox/cycling'
+});
+
+map.addControl(directions, 'top-left');

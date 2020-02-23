@@ -16,8 +16,16 @@ body {
   bottom: 0;
   right: 300px;
   left: 0px;
-  color:#fff;
+  color:#000;
 
+}
+
+.mapboxgl-popup {
+  max-width: 220px;
+  max-height: 2px;
+  font: 10px/10px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  padding: 1px 1px 1px;
+  position: relative;
 }
 
 h3 {
@@ -28,13 +36,16 @@ h3 {
 #sidebar {
   float: right;
   width: 300px;
-  hieght: 1500 px;
+  height: 1000px;
   background-color: #000;
   color: #FFF;
-  padding: 25px;
+  padding:25px;
   box-sizing: border-box;
 }
 button:hover {
   cursor: pointer;
-  background-color: #006987;
+  background-color: #035608;
+}
+{
+  pk.eyJ1IjoibXNwYXJrczcxNCIsImEiOiJjazZsZjl0aXAwYmMzM21uMHpmNjcxMzFoIn0.yMKMcXRxt0QzELn7THF_8g 
 }
